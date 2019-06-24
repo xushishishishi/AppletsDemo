@@ -1,0 +1,22 @@
+/* pages/mine/mine.wxss */
+.userWrap{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+  padding: 30px 0;
+  border-radius: 10px;
+  border: 2px solid rgb(255,249,225);
+}
+.imageWrap{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: block;
+}
+.nickNameWrap{
+  color: rgb(194,194,194);
+  display: block;
+  margin-top: 16px;
+}

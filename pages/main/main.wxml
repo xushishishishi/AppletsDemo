@@ -1,0 +1,52 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset" class="formWrap">
+    <view class='loginWrap'>
+      <view class='formName'>姓名:</view>
+      <input name="name" class='formValue' placeholder='请输入姓名：' bindinput='inputChange'></input>
+    </view>
+
+    <radio-group name="sex" class="loginWrap" bindchange="radioChange">
+      <view class='formName'>性别:</view>
+      <label class="radio" wx:for="{{sexList}}">
+        <radio value="{{item.name}}">{{item.value}}</radio>
+      </label>
+    </radio-group>
+
+    <checkbox-group name="like" class="loginWrap" bindchange="checkboxChange">
+      <view class='formName'>爱好:</view>
+      <label class="checkbox" wx:for="{{likeList}}">
+        <checkbox value="{{item.name}}" />{{item.value}}
+      </label>
+    </checkbox-group>
+
+    <view class='loginWrap'>
+      <view class='formName'>备注:</view>
+      <textarea name="remark" class='formValue' bindblur="bindTextAreaBlur" auto-height placeholder="请输入备注" />
+    </view>
+
+    <view class='loginWrap'>
+      <view class='formName'>所在地:</view>
+      <picker name="address" class='formValue' bindchange="bindPickerChange" value="{{formList.addressIndex}}" range="{{addressList}}">
+        <view>{{addressList[formList.addressIndex]|| "请选择所在地"}}
+        </view>
+      </picker>
+    </view>
+
+    <view class='loginWrap'>
+      <view class='formName'>年龄:</view>
+      <view name="age" class="sliderValue">
+        <slider bindchange="sliderChange" step="1" show-value min="18" max="70" />
+      </view>
+    </view>
+
+    <view class='loginWrap'>
+      <view class='switchName'>是否同意注册:</view>
+      <switch name="isAgree" checked bindchange="switchChange" />
+    </view>
+
+    <view class="buttonWrap">
+      <button form-type="submit" type="primary">注册</button>
+      <button form-type="reset">重置</button>
+    </view>
+  </form>
+</view>

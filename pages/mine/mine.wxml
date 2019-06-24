@@ -1,0 +1,9 @@
+<!--pages/mine/mine.wxml-->
+<view class='container'>
+  <view class="userWrap">
+    <view>
+      <image class="imageWrap" src="{{userInfo.avatarUrl}}"></image>
+      <text class="nickNameWrap">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
